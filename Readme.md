@@ -25,6 +25,7 @@ Lumen is now fully installed! Your local index page for Lumen (like `http://lume
 
 ## Add AfterMiddleware to allow cross-domain calls to your Lumen app
 Create `app/Http/Middleware/AfterMiddleware.php`
+Partially taken from: (https://gist.github.com/danharper/06d2386f0b826b669552#file-corsmiddleware-php)
 ```php
 <?php namespace App\Http\Middleware;
 
