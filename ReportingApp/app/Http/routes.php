@@ -15,10 +15,7 @@ $app->get('/', function () use ($app) {
     return str_random(32);
 });
 
-$app->group([
-    'prefix' => 'customers',
-    'namespace' => 'App\Http\Controllers'
-], function($app) {
+$app->group(['prefix' => 'customers', 'namespace' => 'App\Http\Controllers'], function($app) {
 
     $app->get('/', 'CustomerController@getCustomersSummary');
 

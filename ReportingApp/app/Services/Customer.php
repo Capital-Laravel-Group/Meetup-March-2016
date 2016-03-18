@@ -35,8 +35,9 @@ class Customer {
                     app('db')->raw('COUNT(*) as num_products')
                 ])
                 ->first();
-            $returnCustomer['numProducts'] = $products->num_products;
-
+            if (isset($products->num_products)) {
+                $returnCustomer['numProducts'] = $products->num_products;
+            }
             $return[] = $returnCustomer;
         }
 

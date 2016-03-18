@@ -16,6 +16,7 @@ class CustomerController extends Controller
                 'name'
             ])
             ->get();
+
         return response()
             ->view('customers.index', [
                 'customers' => $customers

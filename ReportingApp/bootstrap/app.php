@@ -48,6 +48,10 @@ $app->singleton(
     App\Console\Kernel::class
 );
 
+$app->middleware([
+    App\Http\Middleware\AfterMiddleware::class
+]);
+
 /*
 |--------------------------------------------------------------------------
 | Register Middleware
@@ -59,9 +63,9 @@ $app->singleton(
 |
 */
 
-$app->middleware([
-    App\Http\Middleware\AfterMiddleware::class
-]);
+// $app->middleware([
+//    App\Http\Middleware\ExampleMiddleware::class
+// ]);
 
 // $app->routeMiddleware([
 //     'auth' => App\Http\Middleware\Authenticate::class,
